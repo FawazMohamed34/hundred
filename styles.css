@@ -1,0 +1,25 @@
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: rgb(196, 146, 40);
+}
+
+.backgroundContrastCSS{
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.877) 50%,rgba(247, 245, 245, 0.959)  50%);
+}
+
+.containerPlayer{
+height:200px;
+width:200px;
+font-size: 8rem;
+}
+
+h1, h2{
+font-size: 50px;
+font-weight: 300;
+}
+.currentplayer1Score{
+color: rgba(255, 255, 255, 0.877);
+}
+.currentPlayer2Score{
+color: rgba(247, 245, 245, 0.959) ;
+}
