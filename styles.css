@@ -4,7 +4,7 @@ body {
 }
 
 .backgroundContrastCSS{
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.877) 50%,rgba(247, 245, 245, 0.959)  50%);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.788) 50%,rgb(247, 245, 245)  50%);
 }
 
 .containerPlayer{
@@ -22,4 +22,12 @@ color: rgba(255, 255, 255, 0.877);
 }
 .currentPlayer2Score{
 color: rgba(247, 245, 245, 0.959) ;
+}
+
+.currentPlayerSticker{
+  background-color: red;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  margin: 10px;
 }
