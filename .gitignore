@@ -1,5 +1,10 @@
-/bootstrap
-/img
-*.png
-*.jpeg
-*jpg
+/build
+/dist
+/out
+/logs
+/tmp
+*.bak
+*~
+.env
+/config/local.js
+/vendor

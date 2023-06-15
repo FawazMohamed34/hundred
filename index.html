@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,92 +10,119 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
   <link href="./bootstrap/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
-  <title>Hundred Game</title>  
+  <title>Hundred Game</title>
 </head>
+
 <body class="container-fluid">
 
-  <div class="backgroundContrastCSS container-fluid pt-5 pb-5 ml-3 mr-3 mt-4 text-center">
-      <div class="row text-center mb-3">
-        <div class="col"> <!--New Game Button-->
-            <button type="submit" id="newGame" class="btn btn-sm">
-              <img src="./img/new-game.png" class="mb-3">
-              <span class="fs-2 m-2">NEW GAME</span>
-            </button>
-      </div> <!--End New Game Button --->
+  <div class="backgroundContrastCSS container-fluid mt-2 text-center">
+    <!-- New Game Button -->
+    <div class="row text-center">
+      <div class="col">
+        <button type="submit" id="newGame" class="btn btn-sm mt-5">
+          <img src="./img/new-game.png" class="mb-3">
+          <span class="fs-2 m-2">NEW GAME</span>
+        </button>
+      </div>
+    </div>
+    <!-- End New Game Button --->
 
+
+    <div class="row mt-5 p-3">
+      <!-- Player 1 Title -->
+      <div class="col-12 col-lg-4">
+        <div class="container-fluid d-flex flex-column align-items-center">
+
+          <div class="pb-4 mb-5">
+            <div class="container d-flex align-items-center">
+              <!-- Player 1 Title -->
+              <h1 id="player1title" class="mb-2">PLAYER 1</h1>
+              <div id="player1" class="currentPlayerSticker"></div> <!-- Sticker Current Player -->
+            </div>
+            <!-- End Player 1 Title -->
+
+            <div class="containerPlayer">
+              <!-- Global Score Player 1 -->
+              <p type="number" class="mb-2 text-danger" id="globalScorePlayer1">0</p>
+            </div>
+            <!-- End Global Score Player 1 -->
+          </div>
+
+          <div class="mb-2">
+            <!-- Current Score Player 1 -->
+            <div class="card bg-danger mt-3 mb-5" style="width: 11rem;">
+              <div class="card-body">
+                <p class="fs-3 font-weight-bold">Current</p>
+                <p class="currentplayer1Score card-text fs-3" id="currentScorePlayer1">0</p>
+              </div>
+            </div>
+          </div>
+          <!-- End Current Score Player 1 -->
+
+        </div>
+      </div>
+      <!-- End Player 2 -->
+
+      <!-- DICE -->
+      <div class="col-12 col-lg-4">
+        <div class="container-fluid mt-5 mb-5 d-flex flex-column align-items-center justify-content-center">
+
+          <img src="./img/dice1.png" width="150" height="150" id="diceImg" class="mt-5"> <!-- The img src dice{number} change in JS -->
+
+          <div class="mt-5 pt-5">
+            <button type="submit" id="rollDice" class="btn btn-sm mt-2"> <!-- Roll Dice Button, On click(event) call function rollDice in JS -->
+              <img src="./img/restart.png" class="mb-3">
+              <span class="fs-1 m-2">ROLL DICE</span>
+            </button> <!-- End Roll dice button -->
+
+            <div class="mt-4">
+              <!-- HOLD BUTTON -->
+              <button type="submit" id="hold" class="btn btn-sm"> <!-- On click(event) call function hold in JS -->
+                <img src="./img/download.png" class="mb-3">
+                <span class="fs-1 m-2"> HOLD</span>
+              </button>
+            </div>
+            <!-- End Hold Button -->
+
+          </div>
+
+        </div>
+      </div>
+      <!-- END DICE -->
+
+      <!-- Player 2 -->
+      <div class="col-12 col-lg-4">
+        <div class="container-fluid d-flex flex-column align-items-center">
+
+          <div class="pb-5 mb-5">
+            <div class="container d-flex align-items-center">
+              <div id="player2"></div> <!-- Sticker class for the current Player -->
+              <h2 id="player2title" class="mb-2 text-secondary">PLAYER 2</h2>
+            </div>
+            <div class="containerPlayer">
+              <p class="text-danger" id="globalScorePlayer2">0</p>
+            </div>
+          </div>
+
+          <!-- Current Score Player 2 -->
+          <div class="mb-2">
+            <div class="card bg-danger mt-3 mb-5" style="width: 11rem;">
+              <div class="card-body">
+                <p class="card-title fs-3">Current</p>
+                <p class="currentPlayer2Score card-text fs-3" id="currentScorePlayer2">0</p>
+              </div>
+            </div>
+          </div>
+          <!-- End Current Score Player 2 -->
+
+        </div>
+      </div>
     </div>
 
-      <div class="row">
-        <div class="col-4">
-          <div class="container-fluid d-flex flex-column align-items-center">
-            <div class="pb-4 mb-5">
-              <div class="container d-flex align-items-center">  <!--Player 1 Title-->
-                <h1 class="mb-2">PLAYER 1</h1>
-                <div id="player1" class="currentPlayerSticker"></div> <!--Sticker Current Player-->
-              </div> <!--End Player 1 Title-->
-
-              <div class="containerPlayer">  <!--Global Score Player 1-->
-                <p type="number" class="mb-2 text-danger" id="globalScorePlayer1">0</p>
-              </div> <!--End Global Score Player 1-->
-            </div>
-            <div class="mb-2"> <!--Current Score Player 1 --->
-              <div class="card bg-danger mt-3 mb-5" style="width: 11rem;">
-                <div class="card-body">
-                  <p class="fs-3 font-weight-bold">Current</p>
-                  <p class="currentplayer1Score card-text fs-3" id="currentScorePlayer1">0</p>
-                </div>
-              </div>
-            </div>  <!--End Current Score Player 1-->
-        </div>
-      </div>  
-
-        <div class="col-4">
-          <div class="container-fluid mt-5 d-flex flex-column align-items-center justify-content-center">
-                                                  <!--DICE-->
-            <img src="./img/dice1.png" width="150" height="150" id="diceImg" class="mt-5"> <!--The img src change in JS-->
-                                      
-            <div class="mt-5 pt-5">
-              <button type="submit" id="rollDice" class="btn btn-sm mt-2"> <!-- Roll Dice Button On click call function rollDice in JS--->
-                              <img src="./img/restart.png" class="mb-3">
-                  <span class="fs-1 m-2">ROLLDICE</span>
-              </button> <!--End Roll dice button-->
-                            
-                  <div class="mt-4"><!--HOLD BUTTON-->
-                    <button type="submit" id="hold" class="btn btn-sm"> <!--On click call function hold in JS--->
-                      <img src="./img/download.png" class="mb-3">
-                        <span class="fs-1 m-2"> HOLD</span>
-                    </button>
-                  </div> <!--End Hold Button --->
-
-           </div>
-  
-        </div>
-        </div>
-
-        <div class="col-4"> 
-          <div class="container-fluid d-flex flex-column align-items-center mb-3">
-            <div class="pb-5 mb-5">
-              <div class="container d-flex align-items-center"> <!--Player 2 --->
-                <div id="player2"></div> <!--Sticker class for the current Player--->
-                <h2 class="mb-2">PLAYER 2</h2>
-                </div>
-              <div class="containerPlayer">
-                <p class="text-danger" id="globalScorePlayer2">0</p> 
-              </div>
-            </div>
-              <!--Current Score Player 2 --->
-            <div class="mb-2">
-              <div class="card bg-danger mt-3 mb-5" style="width: 11rem;">
-                <div class="card-body">
-                  <p class="card-title fs-3">Current</p>
-                  <p class="currentPlayer2Score card-text fs-3" id="currentScorePlayer2">0</p>
-                </div>
-              </div>
-            </div> <!--End Current Score Player 2-->
-        </div>
-      </div> 
   </div>
-</div>
+  </div>
+
   <script src="./script.js"></script>
 </body>
+
 </html>
