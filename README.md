@@ -1,3 +1,4 @@
+Description : 
 - Un jeu fonctionnel se jouant sur un seul ecran
 - Une interface lisible qui correspond à la maquette fournie.
 
@@ -14,3 +15,5 @@ Lors de son tour, le joueur peut décider à tout moment de:
 tour de l’autre joueur.
 - Lancer le dé. S’il obtient un 1, son score ROUND est perdu et c’est la fin de son tour.
 Le premier joueur qui atteint les 100 points sur global gagne le jeu.
+
+FAWAZ Mohamed
