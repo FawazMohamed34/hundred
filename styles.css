@@ -29,3 +29,33 @@ color: rgba(247, 245, 245, 0.959) ;
   width: 20px;
   margin: 5px;
 }
+
+
+    .alert {
+        position: fixed;
+        top: 40%;
+        left: 40%;
+        width: 300px;
+        padding: 10px;
+        z-index: 9999;
+        animation: blink 3s linear infinite;
+        box-shadow: 0 0 10px rgba(255, 191, 0, 0.3); 
+        font-size: 40px; 
+      }
+
+  @keyframes blink {
+    0% {
+      background-color:  #50793f;
+    }
+    50% {
+      background-color: #00ffbf93;
+    }
+    100% {
+      background-color: #ffbf0093; 
+    }
+  }
+
+  .blink {
+    animation: blink 4s linear infinite;
+  }
+  
