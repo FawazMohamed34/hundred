@@ -30,15 +30,26 @@ color: rgba(247, 245, 245, 0.959) ;
   margin: 5px;
 }
 
+@keyframes diceBlink {
+  0% { opacity: 0; }
+  40% { opacity: 1.5; }
+  70% { opacity: 0; }
+  100% { opacity: 1.5; }
+}
 
-    .alert {
+.diceOne {
+  animation: diceBlink 1s infinite;
+}
+
+
+.alert {
         position: fixed;
         top: 40%;
         left: 40%;
         width: 300px;
         padding: 10px;
         z-index: 9999;
-        animation: blink 3s linear infinite;
+        animation: blink 5s linear infinite;
         box-shadow: 0 0 10px rgba(255, 191, 0, 0.3); 
         font-size: 40px; 
       }
@@ -56,6 +67,6 @@ color: rgba(247, 245, 245, 0.959) ;
   }
 
   .blink {
-    animation: blink 4s linear infinite;
+    animation: blink 5s linear infinite;
   }
   
