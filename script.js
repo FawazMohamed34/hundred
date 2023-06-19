@@ -14,7 +14,8 @@ let player2Title = document.getElementById('player2title'); // Titre "Joueur 2"
 // Références vers les éléments audio et le bouton de bascule du son
 const rollDiceSound = new Audio("./audio/roulementDeDee.mp3");
 const diceOneSound = new Audio("./audio/un.mp3");
-const winnerSound = new Audio ("./audio/winner.mp3");
+const winnerSound = new Audio ("./audio/vainqueur.mp3");
+const holdSound = new Audio("./audio/conserver.mp3");
 const toggleButton = document.getElementById("toggleSoundButton");
 let soundIcon = document.getElementById("soundIcon");
 
@@ -37,9 +38,11 @@ const toggleSound = () => {
   if (isSoundEnabled) {
     rollDiceSound.play();
     diceOneSound.play();
+    holdSound.play();
   } else {
     rollDiceSound.pause();
     diceOneSound.pause();
+    holdSound.pause();
   }
 }
 
@@ -177,6 +180,9 @@ const holdHandler = () => {
     let winnerName = currentPlayer === 1 ? player1Name : player2Name;
     displayWinnerAlert(winnerName);
   } else {
+    if (isSoundEnabled) {
+      holdSound.play(); // Joue le son du "Hold" si le son est activé et qu'il n'y a pas de gagnant
+    }
     changeCurrentPlayer();
   }
 };
