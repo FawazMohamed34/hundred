@@ -3,26 +3,28 @@ body {
   background-color: rgb(196, 146, 40);
 }
 
-.backgroundContrastCSS{
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.788) 50%,rgb(247, 245, 245)  50%);
+.backgroundContrastCSS {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.788) 50%, rgb(247, 245, 245) 50%);
 }
 
-.containerPlayer{
-font-size: 8rem;
+.containerPlayer {
+  font-size: 8rem;
 }
 
-h1, h2{
-font-size: 50px;
-font-weight: 300;
-}
-.currentplayer1Score{
-color: rgba(255, 255, 255, 0.877);
-}
-.currentPlayer2Score{
-color: rgba(247, 245, 245, 0.959) ;
+h1, h2 {
+  font-size: 50px;
+  font-weight: 300;
 }
 
-.currentPlayerSticker{
+.currentplayer1Score {
+  color: rgba(255, 255, 255, 0.877);
+}
+
+.currentPlayer2Score {
+  color: rgba(247, 245, 245, 0.959);
+}
+
+.currentPlayerSticker {
   background-color: red;
   border-radius: 50%;
   height: 20px;
@@ -41,32 +43,43 @@ color: rgba(247, 245, 245, 0.959) ;
   animation: diceBlink 1s infinite;
 }
 
-
 .alert {
-        position: fixed;
-        top: 40%;
-        left: 40%;
-        width: 300px;
-        padding: 10px;
-        z-index: 9999;
-        animation: blink 5s linear infinite;
-        box-shadow: 0 0 10px rgba(255, 191, 0, 0.3); 
-        font-size: 40px; 
-      }
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  font-size: 20px;
+  z-index: 9999;
+  animation: blink 5s linear infinite;
+  box-shadow: 0 0 10px rgba(255, 191, 0, 0.3);
+}
 
-  @keyframes blink {
-    0% {
-      background-color:  #50793f;
-    }
-    50% {
-      background-color: #00ffbf93;
-    }
-    100% {
-      background-color: #ffbf0093; 
-    }
+@keyframes blink {
+  0% {
+    background-color: #50793f;
   }
+  50% {
+    background-color: #00ffbf93;
+  }
+  100% {
+    background-color: #ffbf0093;
+  }
+}
 
-  .blink {
-    animation: blink 5s linear infinite;
+.blink {
+  animation: blink 5s linear infinite;
+}
+
+@media (min-width: 768px) {
+  .alert {
+    width: 400px;
+    font-size: 30px;
   }
-  
+}
+
+@media (min-width: 992px) {
+  .alert {
+    width: 500px;
+  }
+}
